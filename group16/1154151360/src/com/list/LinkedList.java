@@ -4,23 +4,23 @@ public class LinkedList {
 
 	private int size;
 	
-	private Node head;//Í·½Úµã
+	private Node head;//å¤´èŠ‚ç‚¹
 	
-	Node current; //µ±Ç°½Úµã
+	Node current; //å½“å‰èŠ‚ç‚¹
 	
 	public LinkedList(){
 		this.head = current = new Node(null);
 		this.size = 0;
 	}
 	
-	//Ìí¼ÓÔªËØ
+	
 	private boolean add(Object object){
 		addAfter(object);
 		size++;
 		return true;
 	}
 	
-	//ÔÚÖ¸¶¨Î»ÖÃÌí¼ÓÔªËØ
+	
 	private boolean add(int index,Object object) throws Exception{
 		index(index - 1);
 		current.nextNode = new Node(object,current.nextNode.nextNode);
@@ -28,7 +28,7 @@ public class LinkedList {
 		return true;
 	}
 	
-	//ÔÚÍ·´¦Ìí¼ÓÔªËØ
+	
 	private boolean addFirst(Object object){
 		Node node = new Node(object,null);
 		current = head.nextNode;
@@ -38,19 +38,19 @@ public class LinkedList {
 		return true;
 	}
 	
-	//ÔÚÎ²´¦Ìí¼ÓÔªËØ
+	
 	private boolean addLast(Object object){
 		add(object);
 		return true;
 	}
 	
-	//»ñÈ¡Ä³¸öÔªËØ
+	
 	private Object get(int index) throws Exception{
 		index(index);
 		return current.object;
 	}
 	
-	//ÒÆ³ıÄ³¸öÔªËØ
+	
 	private  Object remove(int index) throws Exception{
 		
 		if (index == size - 1){
@@ -97,7 +97,7 @@ public class LinkedList {
 		
 		if (index < -1 || index > size){
 			
-			throw new Exception("Ë÷Òı´íÎó");
+			throw new Exception(" ");
 		}
 		
 		if (index == -1){
@@ -137,12 +137,12 @@ public class LinkedList {
 		
 		Node nextNode;
 		
-		//Í·½ÚµãµÄ¹¹Ôì·½·¨
+		
 		Node (Node nextNode){
 			this.nextNode = nextNode;
 		}
 		
-		//·ÇÍ·½ÚµãµÄ¹¹Ôì·½·¨
+		
 		Node (Object object, Node nextNode){
 			this.nextNode = nextNode;
 			this.object = object;
