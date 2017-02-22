@@ -17,7 +17,7 @@ public class ArrayList {
 	
 	public boolean add(int index, Object data){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("下标越界");
+			throw new IndexOutOfBoundsException("锟铰憋拷越锟斤拷");
 		}
 		getRow(size + 1);
 		Object object = elementData [index];
@@ -29,14 +29,14 @@ public class ArrayList {
 	
 	public Object get(int index){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("下标越界");
+			throw new IndexOutOfBoundsException("涓嬫爣瓒婄晫");
 		}
 		return elementData[index];
 	}
 	
 	public Object remove(int index){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("下标越界");
+			throw new IndexOutOfBoundsException("涓嬫爣瓒婄晫");
 		}
 		Object object = elementData [index];
 		System.arraycopy(elementData, index + 1 , elementData, index, size - 1 - index);
