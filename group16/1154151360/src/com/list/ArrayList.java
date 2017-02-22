@@ -1,6 +1,6 @@
 package com.list;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
+
 
 public class ArrayList {
 
@@ -17,7 +17,7 @@ public class ArrayList {
 	
 	public boolean add(int index, Object data){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("涓嬫爣瓒婄晫");
+			throw new IndexOutOfBoundsException("下标越界");
 		}
 		getRow(size + 1);
 		Object object = elementData [index];
@@ -29,14 +29,14 @@ public class ArrayList {
 	
 	public Object get(int index){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("涓嬫爣瓒婄晫");
+			throw new IndexOutOfBoundsException("下标越界");
 		}
 		return elementData[index];
 	}
 	
 	public Object remove(int index){
 		if (index < 0 || index > elementData.length){
-			throw new IndexOutOfBoundsException("涓嬫爣瓒婄晫");
+			throw new IndexOutOfBoundsException("下标越界");
 		}
 		Object object = elementData [index];
 		System.arraycopy(elementData, index + 1 , elementData, index, size - 1 - index);
